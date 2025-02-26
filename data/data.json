@@ -1,0 +1,137 @@
+
+{
+    "user":{
+      "userInfo": {
+          "name": "max mustermann",
+          "age": "24",
+          "height_in_cm": 180,
+          "weight_in_kg": 120,
+          "gender": "male"
+      },
+      "goals":
+      {
+          "goal": 1,
+          "targetWeightChange": -0.5,
+          "activityLevel": 3
+      },
+      "output": {
+          "calorieIntake": 2700,
+          "breakfast": 720,
+          "lunch": 930,
+          "dinner": 830,
+          "snack": 220,
+          "macronutrients": {
+              "carbs": 210,
+              "protein": 180,
+              "fat": 90
+          }
+      }
+    },
+      "steps":{
+        "name": "steps",
+        "amount": 7.826,
+        "kcal": 344
+      },
+    "activity": {
+      "weight_training":{
+        "name": "weight training",
+        "duration": 60,
+        "kcal": 287
+      },
+      "yoga":{
+        "name": "yoga",
+        "duration": 45,
+        "kcal": 143
+      }
+    },
+    "foodLogs": {
+      "breakfast": [
+        {
+          "name": "oats",
+          "amount": 40,
+          "metric": "gram",
+          "kcal": 132,
+          "carbs": 20,
+          "protein": 7,
+          "fat": 6
+        },
+        {
+          "name": "milk",
+          "amount": 200,
+          "metric": "ml",
+          "kcal": 98,
+          "carbs": 10,
+          "protein": 8,
+          "fat": 3.5
+        },
+        {
+          "name": "blueberries",
+          "amount": 60,
+          "metric": "gram",
+          "kcal": 14,
+          "carbs": 3,
+          "protein": 0.2,
+          "fat": 1
+        }
+      ],
+      "lunch": [],
+      "dinner": [],
+      "snack": [
+        {
+          "name": "banana",
+          "amount": 150,
+          "metric": "gram",
+          "kcal": 120,
+          "carbs": 25,
+          "protein": 2,
+          "fat": 5
+        }
+      ]
+    },
+    "goals":[
+      {
+        "id": 1,
+        "goal": "weight loss"
+      },
+      {
+        "id": 2,
+        "goal": "maintain weight"
+      },
+      {
+        "id": 3,
+        "goal": "muscle gain"
+      }
+    ],
+    "activityLevels": [
+    {
+      "id": 1,
+      "name": "sedentary",
+      "description": "little or no exercise",
+      "multiplier": 1.2
+    },
+    {
+      "id": 2,
+      "name": "lightly active",
+      "description": "light exercise/sports 1-3 days per week",
+      "multiplier": 1.375
+    },
+    {
+      "id": 3,
+      "name": "moderately active",
+      "description": "moderate exercise/sports 3-5 days per week",
+      "multiplier": 1.55
+    },
+    {
+      "id": 4,
+      "name": "very active",
+      "description": "hard exercise/sports 6-7 days per week",
+      "multiplier": 1.725
+    },
+    {
+      "id": 5,
+      "name": "super active",
+      "description": "very hard exercise/physical job",
+      "multiplier": 1.9
+    }
+  ]
+}

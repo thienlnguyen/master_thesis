@@ -1,0 +1,68 @@
+
+{
+    "food": [
+        {
+            "name": "oats",
+            "amount": 100,
+            "metric": "gram",
+            "kcal": 132,
+            "carbs": 20,
+            "protein": 7,
+            "fat": 6
+        },
+        {
+            "name": "milk",
+            "amount": 100,
+            "metric": "ml",
+            "kcal": 98,
+            "carbs": 10,
+            "protein": 8,
+            "fat": 3.5
+        },
+        {
+            "name": "blueberries",
+            "amount": 100,
+            "metric": "gram",
+            "kcal": 14,
+            "carbs": 3,
+            "protein": 0.2,
+            "fat": 1
+        },
+        {
+            "name": "banana",
+            "amount": 100,
+            "metric": "gram",
+            "kcal": 120,
+            "carbs": 25,
+            "protein": 2,
+            "fat": 5
+        },
+        {
+            "name": "yoghurt",
+            "amount": 100,
+            "metric": "gram",
+            "kcal": 98,
+            "carbs": 10,
+            "protein": 8,
+            "fat": 3.5
+        },
+        {
+            "name": "carrots",
+            "amount": 100,
+            "metric": "gram",
+            "kcal": 14,
+            "carbs": 3,
+            "protein": 0.2,
+            "fat": 1
+        },
+        {
+            "name": "potato boiled",
+            "amount": 100,
+            "metric": "gram",
+            "kcal": 120,
+            "carbs": 25,
+            "protein": 2,
+            "fat": 5
+        }
+    ]
+}
