@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     addIngredient() {
-      fetch(`/api/getIngredient/${this.searchQuery}`, { method: "GET" })
+      fetch(`${import.meta.env.VITE_API_BASE_URL}/getIngredient/${this.searchQuery}`, { method: "GET" })
         .then((response) => response.json())
         .then((data) => {
           if (data.ingredient) {

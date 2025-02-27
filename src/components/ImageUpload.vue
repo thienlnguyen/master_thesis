@@ -59,7 +59,7 @@ export default {
       const formData = new FormData();
       formData.append("image", this.selectedFile);
 
-      fetch(window.location.origin +"/api/upload", {
+      fetch(`${import.meta.env.VITE_API_BASE_URL}/upload`, {
         method: "POST",
         body: formData,
       })

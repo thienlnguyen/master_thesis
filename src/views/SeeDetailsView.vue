@@ -68,7 +68,7 @@ export default {
     };
   },
   mounted() {
-    fetch(`/api/getEntries/${this.selectedDate}`, { method: "GET" })
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/getEntries/${this.selectedDate}`, { method: "GET" })
       .then((response) => response.json())
       .then((data) => {
         this.ingredients = data.entry[this.$route.params.typeOfMeal] || [];
@@ -115,7 +115,7 @@ export default {
       this.isModified = true;
     },
     save() {
-      fetch("/api/addMeal", {
+      fetch(`${import.meta.env.VITE_API_BASE_URL}/addMeal`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

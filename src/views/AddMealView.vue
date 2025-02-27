@@ -80,7 +80,7 @@ export default {
     }
   },
   mounted() {
-    fetch("/api/getIngredients", {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/getIngredients`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -129,7 +129,7 @@ export default {
     this.addMeal()
     },
     addMeal(){
-      fetch("/api/addMeal", {
+      fetch(`${import.meta.env.VITE_API_BASE_URL}/addMeal`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
