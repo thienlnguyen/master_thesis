@@ -80,7 +80,7 @@ export default {
     }
   },
   mounted() {
-    fetch(window.location.origin +"/api/getIngredients", {
+    fetch("/api/getIngredients", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -129,7 +129,7 @@ export default {
     this.addMeal()
     },
     addMeal(){
-      fetch(window.location.origin +"/api/addMeal", {
+      fetch("/api/addMeal", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

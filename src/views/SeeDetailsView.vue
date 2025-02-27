@@ -115,7 +115,7 @@ export default {
       this.isModified = true;
     },
     save() {
-      fetch(window.location.origin +"/api/addMeal", {
+      fetch("/api/addMeal", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
