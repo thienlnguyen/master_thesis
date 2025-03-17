@@ -123,12 +123,11 @@ input[type="file"] {
 }
 .image-preview-container{
   position: absolute;
-  top: 13%;
   left: 0;
   z-index: 10000;
   background-color: white;
   width: 100%;
-  height: 87%;
+  height: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px
 }

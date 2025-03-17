@@ -35,6 +35,7 @@ export default {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 0 1rem;
+  top: 0;
 }
 .btn-xmark {
 color: #888888;

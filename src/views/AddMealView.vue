@@ -12,7 +12,7 @@
     </div>
     <IngredientList :ingredients="ingredients" @editIngredient="editIngredient" @trigger-popup="showRemovePopup" />
     <div class="buttons-container">
-      <button class="btn-item add-ingredient" @click="addingredient">add ingredient</button>
+      <button class="btn-item add-ingredient" @click="addIngredient">add ingredient</button>
       <button class="btn-item add-meal" @click="addMeal">add meal to diary</button>
     </div>
   </div>
@@ -26,15 +26,14 @@
       @confirm="handleConfirm"
       @cancel="showPopup = false"
     />
-  <EditIngredient
-      v-if="showEdit"
+    <EditIngredient
+      v-if="showEdit && !showSearch"
       :ingredient="selectedItemId"
       @save="saveEdits"
       @cancel="showEdit = false"
     />
-    <SearchIngredient
-    v-if="selectedDate"
-     @editIngredient="editIngredient"
+    <SearchIngredient v-show="showSearch && !showEdit"
+    @editIngredient="editIngredient"
     />
 </div>
 </template>
@@ -68,16 +67,16 @@ export default {
   },
   computed: {
     sumNutritions() {
-      const nutrients = ["kcal", "carbs", "protein", "fat"];
-      const totalNutrients = nutrients.map(nutri => ({
-        name: nutri,
-        value: this.ingredients.reduce((sum, food) => {
-          return sum + (food.nutritions?.[nutri] || 0);
-        }, 0)
-      }));
+    const nutrients = ["kcal", "carbs", "protein", "fat"];
+    const totalNutrients = nutrients.map(nutri => ({
+      name: nutri,
+      value: Math.round(this.ingredients.reduce((sum, food) => {
+        return sum + (food.nutritions?.[nutri] || 0);
+      }, 0))
+    }));
 
-      return totalNutrients;
-    }
+    return totalNutrients;
+  }
   },
   mounted() {
     fetch(`${import.meta.env.VITE_API_BASE_URL}/getIngredients`, {
@@ -109,6 +108,7 @@ export default {
     },
     editIngredient(item){
     this.selectedItemId = item;
+    this.showSearch = false;
     this.showEdit = true;
     },
     saveEdits(item){
@@ -123,6 +123,9 @@ export default {
         }
       }
       this.showEdit = false;
+    },
+    addIngredient() {
+      this.showSearch =true
     },
     addIngredientToMeal(newIngredient) {
     this.ingredients.push(newIngredient);

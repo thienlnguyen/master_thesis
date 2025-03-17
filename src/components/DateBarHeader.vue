@@ -32,11 +32,12 @@ export default {
   background-color: white;
   position: fixed;
   width: 100%;
-  height: 35px;
+  height: 45px;
   left: 0;
   padding: 0 2rem;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.05);
   z-index: 1000;
+  top:0;
 }
 .grid-container {
   display: flex;
@@ -49,17 +50,12 @@ export default {
   display: flex;
   align-items: center;
 }
-.grid-item.left {
-  justify-content: flex-start;
-}
+
 .grid-item.date {
   justify-content: center;
   font-weight: bold;
   color: #888888;
   font-size: 18px;
-}
-.grid-item.right {
-  justify-content: flex-end;
 }
 .chevron {
   height: 24px;

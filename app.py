@@ -30,7 +30,7 @@ except Exception as e:
 UPLOAD_FOLDER = './uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-MODEL_PATH = './model/resnet50_complete.pth'
+MODEL_PATH = './model/model.pth'
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"Model file not found at {MODEL_PATH}")
 

@@ -45,6 +45,6 @@ export default {
 
 <style scoped>
 .view {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 </style>
