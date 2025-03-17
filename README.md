@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-# master_thesis_569834
-=======
 # master_thesis
 
-This template should help get you started developing with Vue 3 in Vite.
+This application was developed as part of the master's thesis "Entwicklung einer Applikation zur Bestimmung von Nährwerten in Fotos von Mahlzeiten" ("Development of an Application for Determining Nutritional Values from Meal Photos") and identifies 101 dishes from the Food-101 dataset. The ResNet model used for food identification was trained separately, saved, and loaded into this repository.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+Once a dish is identified, the corresponding ingredients are assigned to it, and the calories and nutritional values are displayed per 100g.
 
 ## Project Setup
 
@@ -25,21 +16,12 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Start Flask Server
 
 ```sh
-npm run build
+python app.py
 ```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
 ```
->>>>>>> master
